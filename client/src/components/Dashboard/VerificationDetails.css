@@ -1,0 +1,238 @@
+/* Verification Details Card */
+
+.verification-details-card {
+  background: linear-gradient(135deg, #fff8f0 0%, #ffe8cc 100%);
+  border: 2px solid #FFB347;
+  border-radius: 12px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.verification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.verification-header:hover {
+  background: rgba(255, 140, 0, 0.1);
+}
+
+.verification-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.verify-icon {
+  color: #10b981;
+  font-size: 20px;
+}
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: #FF8C00;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.3s;
+}
+
+.expand-btn:hover {
+  transform: scale(1.2);
+}
+
+.verification-content {
+  padding: 0 20px 20px;
+}
+
+/* Checklist Grid */
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.checklist-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.checklist-icon.cooking {
+  background: linear-gradient(135deg, #FF8C00, #FF6B00);
+}
+
+.checklist-icon.temperature {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.checklist-icon.appearance {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.checklist-icon.packaging {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.checklist-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.checklist-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.checklist-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* GPS Section */
+
+.gps-section {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title svg {
+  color: #FF8C00;
+}
+
+.gps-coords {
+  font-size: 13px;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+/* Photos Section */
+
+.photos-section {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.photo-thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.photo-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Notes Section */
+
+.notes-section {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.notes-content {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Verification Footer */
+
+.verification-footer {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 2px dashed #FFB347;
+}
+
+.verified-at {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .checklist-value {
+    white-space: normal;
+  }
+}

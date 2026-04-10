@@ -1,0 +1,862 @@
+/* Receiver Dashboard New - Exact UI Clone */
+
+.receiver-dashboard-new {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.dashboard-header-new {
+  margin-bottom: 24px;
+  padding: 0 24px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FF8C00;
+  margin: 0;
+  padding: 24px 0;
+}
+
+/* Profile Section */
+.profile-section {
+  position: relative;
+}
+
+/* From Uiverse.io by reglobby */
+.user-profile {
+  width: 131px;
+  height: 51px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2e8eff 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile:hover,
+.user-profile:focus {
+  background-color: rgba(46, 142, 255, 0.7);
+  box-shadow: 0 0 10px rgba(46, 142, 255, 0.5);
+  outline: none;
+}
+
+.user-profile-inner {
+  width: 127px;
+  height: 47px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-profile-inner svg {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item svg {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.dropdown-item.logout {
+  color: #ef4444;
+  border-top: 1px solid #f3f4f6;
+}
+
+.dropdown-item.logout svg {
+  color: #ef4444;
+}
+
+.dropdown-item.logout:hover {
+  background: #fef2f2;
+}
+
+.dropdown-item.logout svg {
+  color: #dc2626;
+}
+
+/* Tabs Container */
+.tabs-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab-button:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+}
+
+.tab-button svg {
+  font-size: 18px;
+}
+
+/* Filters Bar */
+.filters-bar {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 24px 24px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  flex: 1;
+  max-width: 350px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.filter-group {
+  position: relative;
+}
+
+.filter-select {
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  min-width: 160px;
+  transition: all 0.3s;
+}
+
+.filter-select:hover {
+  border-color: #FF8C00;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #FF8C00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.refresh-btn {
+  padding: 12px 20px;
+  background: #FF8C00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.refresh-btn:hover {
+  background: #CC7000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.refresh-btn svg {
+  font-size: 14px;
+}
+
+/* Main Content - Two Columns */
+.main-content-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 0 24px 24px 24px;
+}
+
+/* Left Panel - Donations List */
+.donations-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.donations-list-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.donations-list-panel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.donations-list-panel::-webkit-scrollbar-thumb {
+  background: #FF8C00;
+  border-radius: 10px;
+}
+
+.donations-list-panel::-webkit-scrollbar-thumb:hover {
+  background: #CC7000;
+}
+
+/* Donation Card */
+.donation-card-new {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.donation-card-new:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left-color: #FF8C00;
+  transform: translateY(-2px);
+}
+
+.card-header-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.food-name-new {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF8C00;
+  margin: 0;
+  flex: 1;
+}
+
+.status-badge-new {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge-new.available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Card Details */
+.card-details-new {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-row-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-item-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.detail-icon-new {
+  color: #FF8C00;
+  font-size: 16px;
+}
+
+.time-badge-new {
+  color: #FF8C00;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Card Footer */
+.card-footer-new {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.donor-info-new {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.donor-avatar-new {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.donor-details-new {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.donor-name-new {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.donor-rating-new {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon-new {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.donor-rating-new span {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.claim-btn-new {
+  padding: 10px 20px;
+  background: #FF8C00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.claim-btn-new:hover {
+  background: #CC7000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.claim-btn-new svg {
+  font-size: 14px;
+}
+
+/* Track Button for My Deliveries */
+.track-btn-new {
+  width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.track-btn-new:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.track-btn-new:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.track-btn-new svg {
+  font-size: 14px;
+}
+
+/* Delivery Card Specific Styles */
+.donation-card-new.delivery-card {
+  border-left: 4px solid #667eea;
+}
+
+.donation-card-new.delivery-card .card-footer-new {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Status Badges for Deliveries */
+.status-badge-new.assigned {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge-new.picked-up {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge-new.on-the-way {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-badge-new.delivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Right Panel - Map */
+.map-panel-new {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-title-new {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF8C00;
+  margin: 0 0 16px 0;
+}
+
+.map-container-new {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-container-new .leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Map Legend */
+.map-legend-new {
+  display: flex;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 16px;
+}
+
+.legend-item-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.legend-dot-new {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Map Popup */
+.map-popup h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF8C00;
+}
+
+.map-popup p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.map-popup p strong {
+  color: #374151;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #FF8C00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* No Donations State */
+.no-donations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.no-donations svg {
+  color: #d1d5db;
+  margin-bottom: 16px;
+}
+
+.no-donations p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.no-donations small {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Custom Marker Styles */
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .main-content-new {
+    grid-template-columns: 1fr;
+  }
+
+  .map-panel-new {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .receiver-dashboard-new {
+    padding: 16px;
+  }
+
+  .dashboard-header-new {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .profile-section {
+    width: 100%;
+  }
+
+  .profile-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .profile-dropdown {
+    left: 0;
+    right: 0;
+    min-width: 100%;
+  }
+
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .search-box,
+  .filter-select {
+    max-width: none;
+    width: 100%;
+  }
+
+  .refresh-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card-footer-new {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .claim-btn-new {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map-legend-new {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-name-new {
+    font-size: 16px;
+  }
+
+  .detail-row-new {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Recent Donations List */
+.recent-donations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-donation-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #FF8C00;
+  transition: all 0.3s;
+}
+
+.recent-donation-item:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.donation-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6B00 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.donation-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.donation-details h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.donation-meta {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.donation-time {
+  font-size: 13px;
+  color: #999;
+  margin: 4px 0 0 0;
+}
+
+.donation-status {
+  flex-shrink: 0;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-claimed {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-assigned {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-picked-up,
+.status-picked_up {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.status-delivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
