@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌱 FoodBridge - No Food Should Go to Waste
 
 A secure, modern, role-based authentication system for food redistribution.
@@ -224,3 +225,7 @@ For support, email support@foodbridge.com or open an issue.
 ---
 
 **Built with ❤️ for a world with zero food waste**
+=======
+# FoodBridge
+Platform to connect surplus food providers with people in need
+>>>>>>> d45e554ccb8d1c3f90a005786652cf1f0c9ebf3d
